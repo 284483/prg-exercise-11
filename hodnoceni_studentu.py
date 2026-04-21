@@ -46,15 +46,17 @@ class StudentsGrades:
 
 results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
 def main():
-
-    print(results.count())  # 9
-    print(results.get_by_index(2))  # 91
-    print(results.scores)
-    print(results.get_grade(2))
-    print(results.find(85))
-    print(results.get_sorted())
-    print(results.scores)
-
-
+    #
+    # print(results.count())  # 9
+    # print(results.scores)
+    # print(results.get_grade(2))
+    # print(results.find(85))
+    # print(results.get_sorted())
+    # print(results.scores)
+    pocet_ziakov=results.count()
+    for i in range(pocet_ziakov):
+        body = results.get_by_index(i)  # 91
+        znamka=results.get_grade(i)
+        print(f"Student {i+1}: {body} points - {znamka}")
 if __name__ == "__main__":
     main()
